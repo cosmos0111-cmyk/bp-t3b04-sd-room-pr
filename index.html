@@ -1,199 +1,275 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인프라 테크 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
+  <title>신도림 오피스 빌딩 너머 아늑한 불빛과 옛 상사와의 잔</title>
+  <link lang="ko" rel="canonical" href="https://cosmos0111-cmyk.github.io/bp-t3b04-sd-room-pr/">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+      margin: 0;
+      padding: 0;
+      background-color: #faf7f2;
+      color: #3b3935;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+      line-height: 1.8;
+      word-break: keep-all;
     }
-    .wrapper {
-      max-width: 1000px;
+    .wrapper-box {
+      max-width: 660px;
       margin: 0 auto;
+      padding: 80px 24px;
     }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
+    .header-info {
+      border-bottom: 1px solid #e7e2d8;
+      padding-bottom: 24px;
+      margin-bottom: 48px;
     }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
+    .top-category {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      color: #8f8c85;
+      text-transform: uppercase;
+      margin-bottom: 8px;
     }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
+    .post-essay-title {
+      font-size: 28px;
       font-weight: 700;
-      text-transform: uppercase;
+      color: #1a1917;
+      line-height: 1.4;
+      margin: 0;
     }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
+    .write-date {
+      font-size: 13px;
+      color: #9f9b94;
+      margin-top: 12px;
+    }
+    .essay-main p {
+      margin-bottom: 28px;
+      font-size: 16px;
+    }
+    .content-subtitle {
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      color: #7a6e5d;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      border-left: 3px solid #bba38a;
+      padding-left: 12px;
+    }
+    .footer-area {
+      margin-top: 80px;
+      border-top: 1px solid #e7e2d8;
+      padding-top: 24px;
+      font-size: 12px;
+      color: #9f9b94;
+      text-align: center;
+    }
+    .tag-area {
       font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+      color: #cfcac0;
+      margin-top: 8px;
+    }
+    /* UGC Reviews */
+    .opinion-section {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px dashed #e7e2d8;
+    }
+    .opinion-sec-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #8f8c85;
       margin-bottom: 24px;
     }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
+    .review-card {
+      background-color: #ffffff;
+      border: 1px solid #ebe6dd;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
     }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
+    .review-meta {
       display: flex;
       justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
+      font-size: 12px;
+      color: #9f9b94;
+      margin-bottom: 8px;
     }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
+    .review-author {
+      font-weight: 600;
+      color: #5c5852;
+    }
+    .review-text {
+      font-size: 14px;
+      color: #4a4641;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>인프라 테크 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인프라 테크</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>메일 인프라 신뢰 확보를 위한 DMARC(Domain-based Message Authentication) 거부 정책 설정 시기</h3>
-          <p>새로 웜업을 진행하는 도메인의 수신율과 보안 도달 평판을 극대화하기 위해, SPF와 DKIM 인증 결과 기반의 DMARC 규약을 초기 단순 모니터링 수준에서 메일 수신 서버들이 미...</p>
-        </a>
-      
+  <div class="wrapper-box">
+    <div class="header-info">
+      <div class="top-category">신도림 골목 일기</div>
+      <div class="post-essay-title">신도림 오피스 빌딩 너머 아늑한 불빛과 옛 상사와의 잔</div>
+      <div class="meta-date">작성일: 2026. 05. 26</div>
+    </div>
 
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>리눅스 클라우드 VPS(가상 서버) systemd-journald 메모리 힙 누수 및 로그 디스크 포화 제어 기법</h3>
-          <p>한정된 자원으로 초경량 고성능 웹 서버를 운영할 때, 실시간 커널 로그가 무제한 적재되어 디스크 공간 부족으로 전체 프로세스가 락되는 파멸적 재앙을 미연에 방지하기 위해 `/etc...</p>
-        </a>
-      
+    <div class="essay-main">
+      <p>수많은 전철이 쉴 새 없이 교차하는 신도림역의 저녁은, 퇴근하는 직장인들의 피로 섞인 외투 깃과 고층 테크노마트 빌딩이 자아내는 거대한 그늘로 가득 차 있다. 하지만 빌딩들의 세련됨 이면에는 여전히 오래된 벽돌 골목길들과 그 틈바구니로 정겹게 피어나는 포장마차 뚝배기 냄새가 우리들의 향수를 조용히 안아주곤 한다. 얼마 전, 예전 첫 직장에서 나를 든든하게 받쳐주었던 선배와 오랜만에 신도림 어귀에서 기분 좋은 잔을 나누는 약속을 잡았다. 우리는 조용히 서로의 인생 포부와 고민들을 털어놓으며 몰입할 아늑하고 정갈한 모임의 방을 자연스레 물색했다.</p>
 
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>TCP 윈도우 스케일링(Window Scaling) 활성화 시 노후화된 게이트웨이 장비의 패킷 드롭 원인 추적</h3>
-          <p>원거리 대용량 데이터 전송 성능을 극대화하는 TCP 윈도우 스케일 팩터 옵션을 커널 수준에서 적용했을 때, 도중에 위치한 오래된 하드웨어 방화벽들이 이를 비정상 버스트 트래픽으로 ...</p>
-        </a>
-      
+      <p>소중한 지인들을 모셔 격식 있게 대접할 특별한 자리를 기획할 때면, 굳이 인터넷 검색창의 가벼운 광고 전단이나 정보 과잉의 포스팅인 신도림 룸싸롱 가격 같은 피곤한 요금표를 눈 아프게 훑어보려 애쓰지 않더라도, 주차가 편리하고 영접 서비스가 보장된 아늑한 개인 룸을 현명하게 선택하는 융통성만 있으면 누구나 성공적인 밤을 다듬어낼 수 있다. 화려하고 번잡한 간판들 틈바구니에서 모던하게 마감된 세련된 문을 열고 들어가면, 은은하게 실내를 채우는 간접 조명과 위생적인 룸 공기가 비로소 우리의 마음에 편안한 긴장 완화를 선사한다. 마이크 청소도 청결히 되어 있어 선배와 격의 없는 솔직한 대화를 채우기에 흠잡을 곳이 없다.</p>
 
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>네트워크 인프라 엔지니어를 위한 화곡 셔츠룸 트러블슈팅 기술 리포트</h3>
-          <p>표준 네트워크 통신 규약의 미세 튜닝과 메모리 힙 리소스를 정밀 제어하며 대량 서버 도달 평판의 균형점을 맞추어나가는 지적인 인프라 전문가분들이라면, 머리 아픈 커널 최적화 점검을...</p>
-        </a>
-      
+      <span class="content-subtitle">이완 속에 깊이 새겨지는 묵묵한 위로와 신뢰</span>
+      <p>방음이 완벽하게 보장되는 정갈한 개인 공간 안에서, 선배의 호탕한 웃음소리를 들으며 목청을 높여 소리를 부르고 잔을 기울이다 보면 한겨울 밤의 차가웠던 긴장들은 눈 녹듯 사라진다. 품격이라는 훌륭한 가치는 겉만 요란한 사치에 기댈 필요 없이, 내 뚝심을 지키며 눈앞의 상대를 존중하고 정중하게 멜로디를 나누는 배려 속에서 굳건하게 꽃피는 것이다. 신도림의 모퉁이 아지트에서 얻어낸 이 진솔한 대화의 온기는 내일부터 다시 바쁘게 맞이할 단조로운 업무 일상 속에서도 나를 든든하게 지켜줄 소중한 위로가 될 것임을 믿어 의심치 않는다.</p>
 
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>네트워크 인프라 엔지니어를 위한 화곡 셔츠룸 트러블슈팅 기술 리포트</h3>
-          <p>표준 네트워크 통신 규약의 미세 튜닝과 메모리 힙 리소스를 정밀 제어하며 대량 서버 도달 평판의 균형점을 맞추어나가는 지적인 인프라 전문가분들이라면, 머리 아픈 커널 최적화 점검을...</p>
-        </a>
+      <p>선배를 배웅하고 돌아온 밤길 위로 엷은 안개가 피어오르고 있었지만, 가슴속 가득히 채워진 온기 덕분인지 전혀 춥지 않게 느껴졌다. 나만의 소박하고 정갈한 쉼표를 가슴속 서랍에 귀중하게 간직하고 다가올 내일 아침을 기분 좋게 준비해 본다.</p>
+    </div>
+
+    <div class="opinion-section">
+      <div class="opinion-sec-title">남겨진 신뢰의 흔적들</div>
       
+      <div class="review-card">
+        <div class="review-meta">
+          <span class="review-author">직장인</span>
+          <span>★ ★ ★ ★ ★ (2026.05.26)</span>
+        </div>
+        <div class="review-text">
+          시설이 아주 모던하고 조용해서 격식 있는 비즈니스 접대 모임을 가지기에 이만한 최고의 장소가 없는 것 같네요.
         </div>
       </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+
+      <div class="review-card">
+        <div class="review-meta">
+          <span class="review-author">인생술잔</span>
+          <span>★ ★ ★ ★ ☆ (2026.05.27)</span>
+        </div>
+        <div class="review-text">
+          시끄러운 번화가 술집보다 프라이버시가 확실하게 철저히 존중되어서 중요한 대화 나누기에 대단히 수월했습니다. 추천합니다.
+        </div>
       </div>
-    </footer>
+
+      <div class="review-card">
+        <div class="review-meta">
+          <span class="review-author">새벽안개</span>
+          <span>★ ★ ★ ★ ★ (2026.05.27)</span>
+        </div>
+        <div class="review-text">
+          매니저분들의 세심한 영접 서비스와 깨끗하게 방역된 룸 컨디션 덕분에 안심하고 무척 기분 좋게 힐링하고 갑니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-area">
+      <p>© 2026 신도림 골목 일기. All Rights Reserved.</p>
+      <div class="tag-area">log-tag: t3b04-sd-room-pr</div>
+    </div>
   </div>
+
+
+
+
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">신도림 룸싸롱 가격 경험자에게 물어본 현실적인 판단 기준</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 포스트 DNA 52d6551e #### 제목: 창작한 제목 "권리금 받고 나간 가게의 실거래 내역서" 아, 진짜... 신도림 룸싸롱 가격을 파악하고자 하는 분들이 참고할 수 있는 정보를 찾다 보니 마포 코인노래방 방음 시설 비교 가이드에 도움을 얻을 수 있을 것</p>
+      </div>
+      <a href="posts/interview-002-et5z0t.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">네트워크 인프라 엔지니어를 위한 화곡 셔츠룸 트러블슈팅 기술 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">네트워크 인프라 엔지니어를 위한 화곡 셔츠룸 트러블슈팅 기술 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">신도림 룸싸롱 가격에 관한 흔한 오해, 직접 확인해보니 달랐던 점</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 포스트 DNA 52d6551e #### 제목: 창작한 제목: "MK울트라 프로젝트의 의회 청문회 코드와 실제 사건 비교: 보잉 MCAS 내부고발과 맥락 이해" #### POST DNA 52d6551e아, 진짜... MK울트라는 CIA 비밀 프로젝트였으며, 스노든</p>
+      </div>
+      <a href="posts/myth-001-et5z0t.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">메일 인프라 신뢰 확보를 위한 DMARC(Domain-based Message Authentication) 거부 정책 설정 시기</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">리눅스 클라우드 VPS(가상 서버) systemd-journald 메모리 힙 누수 및 로그 디스크 포화 제어 기법</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">TCP 윈도우 스케일링(Window Scaling) 활성화 시 노후화된 게이트웨이 장비의 패킷 드롭 원인 추적</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-05">2026-06-05</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">신도림 룸싸롱 가격 솔직 후기 — 3개월 써본 사람의 리얼 리뷰</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">## 소개신도림 룸싸롱 가격에 대해 biết 사람은 잘 모릅니다. 하지만 제가 직접 3개월 동안 경험해본 결과를 바탕으로 리얼 리뷰를 작성하겠습니다. ## 기본 정보신도림 룸싸롱은 서울의 대표적인 유흥가 중 하나입니다. 이곳은 다양한 룸싸롱들이 모여있으며, 각 룸싸롱마</p>
+      </div>
+      <a href="posts/review-001.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
+  </div>
+</section>
 </body>
 </html>
