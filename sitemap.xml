@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cosmos0111-cmyk.github.io/bp-t3b04-sd-room-pr/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cosmos0111-cmyk.github.io/bp-t3b04-sd-room-pr/posts/field_note-002-114pxe0.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cosmos0111-cmyk.github.io/bp-t3b04-sd-room-pr/posts/interview-002-et5z0t.html</loc>
@@ -56,7 +62,7 @@
   </url>
   <url>
     <loc>https://cosmos0111-cmyk.github.io/bp-t3b04-sd-room-pr/feed.xml</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
